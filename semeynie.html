@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="photo, PhotoStudia">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function() { // Ждём загрузки страницы
+  
+  $(".container img"). dblclick(function(){ // Событие клика на маленькое изображение
+      var img = $(this);  // Получаем изображение, на которое кликнули
+    var src = img.attr('src'); // Достаем из этого изображения путь до картинки
+    $("body").append("<div class='popup'>"+ //Добавляем в тело документа разметку всплывающего окна
+             "<div class='popup_bg'></div>"+ // Блок, который будет служить фоном затемненным
+             "<img src="+src+" class='popup_img' />"+ // Само увеличенное фото
+             "</div>"); 
+    $(".popup").fadeIn(800); // Медленно выводим изображение
+    $(".popup_bg").click(function(){  // Событие клика на затемненный фон    
+      $(".popup").fadeOut(800); // Медленно убираем всплывающее окно
+      setTimeout(function() { // Выставляем таймер
+        $(".popup").remove(); // Удаляем разметку высплывающего окна
+      }, 800);
+    });
+  });
+  
+});
+
+
+</script>
+<title> фото</title>
+<body>
+</head> 
+<header>
+      <h1 class="logo" ><a href="index.html"><img src="logo2.png" class="png"></a> Пигарева Любовь</h1>
+      <h2 class="logo2">Photo Studio</h2>
+      
+<h3 id="h3">Фотоcтудия  ст.Тацинская | Фотосъемка | Видеосъемка</h3>
+
+</header>
+<nav class="nav center">
+  <ul>
+    <li class="current"><a href="index.html">Главная</a></li>
+    <li><a href="photoalbom.html" >Фотоальбом</a></li>
+    <li><a href="price.html" >Прайс лист</a></li>
+    <li><a href="kontakt.html" >Контакты</a></li>
+    <li><a href="vopros.html" >Задать вопрос</a></li>
+  </ul>
+</nav>
+
+<h2 class="zagolovok"> Фотосессии семейные и детские </h2>
+
+
+<section class="container">
+<img src="semey/1.jpg" alt=""  ></a>
+<img src="semey/2.jpg" alt="" ></a>
+<img src="semey/3.jpg" alt="" ></a>
+<img src="semey/4.jpg" alt=""  ></a>
+<img src="semey/5.jpg" alt=""  ></a>
+<img src="semey/6.jpg" alt=""  ></a>
+<img src="semey/7.jpg" alt=""  ></a>
+<img src="semey/8.jpg" alt=""  ></a>
+<img src="semey/9.jpg" alt=""  ></a>
+<img src="semey/10.jpg" alt="" ></a>
+<img src="semey/11.jpg" alt="" ></a>
+<img src="semey/12.jpg" alt="" ></a>
+<img src="semey/13.jpg" alt="" ></a>
+<img src="semey/14.jpg" alt="" ></a>
+<img src="semey/15.jpg" alt="" ></a>
+<img src="semey/16.jpg" alt="" ></a>
+<img src="semey/17.jpg" alt="" ></a>
+<img src="semey/18.jpg" alt="" ></a>
+<img src="semey/19.jpg" alt="" ></a>
+<img src="semey/20.jpg" alt="" ></a>
+<img src="semey/21.jpg" alt="" ></a>
+<img src="semey/22.jpg" alt="" ></a>
+<img src="semey/23.jpg" alt="" ></a>
+<img src="semey/24.jpg" alt=""></a>
+<img src="semey/25.jpg" alt=""></a>
+</section>
+
+
+
+
+<footer >
+
+ <p class="leftstr"> © ИП Пигарева Л.Н, 2013-2017 <br>
+                   Фотостудия ст.Тацинская ул. Ленина 98 <br>
+                      С 9:00 до 18:00 без перерыва и выходных</p>
+  <p class="rightstr">телeфон:&nbsp +7(950)846-01-27
+ </p>
+
+</footer>
+
+  
+</body>
+
+
+
+
+</html>
